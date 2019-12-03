@@ -1,0 +1,531 @@
+body {
+	margin: 0;
+	font: 16px/1.6em sans-serif;
+	color: #333;
+	background: #fff;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	position: relative;
+}
+
+@media (min-width: 1600px) {
+	body {
+		font: 17px/1.6em sans-serif;
+	}
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.img-r {
+	max-width: 100%;
+	height: auto;
+}
+
+.center {
+	text-align: center;
+}
+
+.preload * {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
+
+.container {
+	padding: 0 15px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+header.main {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+@media (min-width: 1600px) {
+	header.main {
+		padding: 20px;
+	}
+}
+
+header.main * {
+	user-select: none;
+}
+
+header.main .container {
+	display: flex;
+	max-width: 100%;
+}
+
+header.main .logo {
+	text-decoration: none;
+	font-size: 13px;
+	color: rgb(0, 30, 80);
+	display: inline-block;
+	padding: 12px 0px;
+	border-radius: 0 0 2px 2px;
+	line-height: 35px;
+	font-weight: bold;
+}
+
+header.main .logo img {
+    width: 28px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -7px;
+    margin-right: 5px;
+}
+
+@media (min-width: 320px) {
+	header.main .logo {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 470px) {
+	header.main .logo {
+		font-size: 1.5em;
+	}
+	header.main .logo img {
+    	width: 38px;
+	}
+}
+
+@media (min-width: 960px) {
+	header.main .logo {
+		font-size: 1.7em;
+	}
+	header.main .logo img {
+    	width: 38px;
+	}
+}
+
+nav.main {
+	position: fixed;
+	z-index: 2;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background: radial-gradient(circle at 0% 0%, rgba(0, 67, 122, 0.99) 0%, rgba(0, 30, 80, 0.99) 100%);
+	transform: translateY(-100%);
+	transition: all 0.4s ease-in-out;
+	padding-top: 100px;
+}
+
+body.open nav.main {
+	transform: translateY(0);
+}
+
+
+nav.main .row .col {
+	text-align: center;
+	margin: 20px;
+}
+
+@media (min-width: 960px) {
+	nav.main .row .col {
+		margin: 0 2% 50px;
+	}
+}
+
+nav.main a {
+	display: block;
+	color: #eee;
+	text-decoration: none;
+	line-height: 2.5em;
+	transition: color 0.25s ease-in-out;
+}
+
+nav.main a:hover {
+	color: #4CC7F4;
+}
+
+nav.main a:first-child {
+	color: #fff;
+	margin-bottom: 10px;
+	line-height: 2em;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	font-size: 1.5em;
+}
+
+nav.main a:first-child:hover {
+	color: #4CC7F4;
+}
+
+@media (min-width: 1000px) {
+	nav.main .container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		max-width: 100%;
+	}
+	nav.main .row {
+		display: flex;
+	}
+	nav.main .row .col {
+		width: 25%;
+	}
+	nav.main a:first-child {
+		font-size: 1.5em;
+	}
+	nav.main a {
+		font-size: 1.2em;
+	}
+}
+
+@media (min-width: 1600px) {
+	nav.main a:first-child {
+		font-size: 1.75em;
+	}
+	nav.main a {
+		font-size: 1.5em;
+	}
+}
+
+header.main nav.header {
+	display: none;
+    margin-left: auto;
+    line-height: 60px;
+    margin-right: 50px;
+}
+
+header.main nav.header a {
+	text-decoration: none;
+	color: #666;
+	font-size: 1.1em;
+}
+
+header.main .menu-toggle {
+	margin-left: auto;
+	color: rgb(0, 30, 80);
+	line-height: 60px;
+	font-size: 1.2em;
+	cursor: pointer; 
+}
+
+header.main .menu-toggle .text {
+	display: none;
+}
+
+@media (min-width: 470px) {
+	header.main .menu-toggle .text {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 600px) {
+	header.main nav.header {
+		display: block;
+	}
+	header.main .menu-toggle {
+		margin-left: 0;
+	}
+}
+
+.burger {
+	margin-top: 7px;
+	margin-right: 5px;
+	height: 30px;
+	padding: 0px;
+	margin-left: 8px;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	transition: all 0.25s ease-in-out;
+	transform-origin: center center;
+}
+
+.burger__1,
+.burger__2,
+.burger__3 {
+	height: 3px;
+	width: 30px;
+	background: rgb(0, 30, 80);
+	content: "";
+	display: block;
+	position: relative;
+	transition: all 0.25s ease-in-out;
+	border-radius: 1px;
+}
+
+.burger__1 { top: 0; }
+.burger__2 { top: 5px; }
+.burger__3 { top: 10px; }
+
+.burger__2 {
+	width: 80%;
+}
+
+body.open .burger {
+	transform: rotate(90deg) translateX(-4px) translateY(5px);
+}
+
+body.open .burger__1 {
+	transform: translateY(8px) rotate(45deg);
+}
+
+body.open .burger__2 {
+	opacity: 0;
+}
+
+body.open .burger__3 {
+	transform: translateY(-8px) rotate(-45deg);
+}
+
+.emotion {
+	min-height: 600px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+	.emotion {
+		height: 70vh;
+		min-height: 600px;
+	}
+}
+
+.emotion:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 250px;
+	z-index: 1;
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+}
+
+.emotion .text {
+	position: relative;
+	z-index: 1;
+}
+
+.emotion .bg {
+	transition: all 0.25s ease-in-out;
+}
+
+.emotion .bg:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 70vh;
+    min-height: 600px;
+	opacity: 1;
+	background-image: url("https://www.tenbrinke.com/files/object_manager/germany/Gross%20Umstadt/IE6958_VWSchuetz_GrossUmstadt/GrossUmstadt_VWAutohausSchuetz_MWTTrojan_16.jpg");
+	background-size: cover;
+	background-position: 20% center;
+	background-repeat: no-repeat;
+}
+
+.emotion .text {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	color: #fff;
+	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.emotion .text h2 {
+	font-size: 4em;
+	line-height: 1em;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.emotion .text h3 {
+	font-size: 2em;
+	line-height: 1em;
+	margin: 0;
+}
+
+@media (min-width: 1400px) {
+	.emotion .bg:before {
+		background-position: center center;
+	}
+	.emotion .text {
+		bottom: 50px;
+		left: 50px;
+	}
+}
+
+.intro .col {
+	background: #000;
+	color: #fff;
+	position: relative;
+	min-height: 400px;
+	overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+	.intro .row {
+		display: flex;
+	}
+	.intro .col {
+		width: calc(100%/3);
+		height: 30vh;
+		min-height: 250px;
+	}	
+}
+
+.intro .col:hover .bg {
+	transform: scale(1.1);
+}
+
+.intro .col .bg {
+	top: 0;
+	left: 0;
+    width: 100%;
+ 	height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 100px black;
+    position: absolute;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.intro .col:nth-child(1) .bg {
+	background-image: url("https://s7g10.scene7.com/is/image/volkswagenag/GL5463_side_women?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmMxMTA=");
+}
+
+.intro .col:nth-child(2) .bg {
+	background-image: url("https://s7g10.scene7.com/is/image/volkswagenag/VW2084_Range-VW-IQ.DRIVE-in-front-of-urban-setting_16-9_f-cc?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTk2MCZoZWk9NTQwJmFsaWduPTAuMDAsMC4wMCY3Yjkx");
+}
+
+.intro .col:nth-child(3) .bg {
+	background-image: url("https://s7g10.scene7.com/is/image/volkswagenag/PAR4479_Passat-Variant-with-family-at-open-trunk_3-2_f-cr?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTk2MCZoZWk9NTQwJmFsaWduPTAuODMsMC4wMCYzY2Iy");
+
+}
+
+.intro .col .text {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+	transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 1000px) {
+	.intro .col .text {
+		transform: translateY(calc(100% - 60px));
+	}
+}
+
+@media (min-width: 1400px) {
+	.intro .col .text {
+	}
+}
+
+.intro .col .text:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 250px;
+	z-index: 0;
+	background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+}
+
+.intro .col:hover .text {
+	transform: translateY(0%);	
+}
+
+.intro .col .text h2 {
+	margin: 0 0 10px;
+	font-size: 1.25em;
+}
+
+@media (min-width: 1200px) {
+	.intro .col .text h2 {
+		font-size: 1.5em;
+	}
+}
+
+.intro .col .text p {
+	margin: 0;
+	line-height: 1.6em;
+}
+
+.intro .col .text .inside {
+	position: relative;
+	z-index: 1;
+	padding: 20px;
+}
+
+.intro .col .text a.button {
+	background: #fff;
+	color: #000;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 50px;
+	padding: 8px 30px;
+	text-decoration: none;
+	display: inline-block;
+	transition: all 0.3s ease-in-out;
+}
+
+.intro .col .text a.button:hover {
+	background: #4CC7F4;
+}
+
+.welcome {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.welcome .text {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.welcome .text h1 {
+	color: rgb(0, 30, 80);
+	text-transform: uppercase;
+	font-size: 1.4em;
+	margin-bottom: 25px;
+}
+
+.welcome .text a.button {
+	color: rgb(0, 30, 80);
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 2px solid rgb(0, 30, 80);
+	font-size: 1.25em;
+	transition: color 0.15s ease-in-out;
+}
+
+.welcome .text a.button:hover {
+	color: #1b42cb;
+	border-bottom: 2px solid #1b42cb;
+}
+
+@media (min-width: 1000px) {
+	.welcome {
+		padding: 60px 0;
+	}
+	.welcome .text {
+		max-width: 66%;
+	}
+}
