@@ -861,6 +861,7 @@ video {
 		padding: 0;
 		box-shadow: 0 0 5px rgba(0,0,0,0.2);
 		margin-top: 25px;
+		margin-bottom: 0;
 	}
 	.cars.used .item header {
 		min-height: 25vw;
@@ -869,10 +870,11 @@ video {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		font-size: 0.9em;
 	}
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
 	.cars.used .item {
 		width: 24%;
 	}
@@ -883,7 +885,7 @@ video {
 
 footer.top {
 	background: #eee;
-	margin-top: 100px;
+	margin-top: 50px;
 }
 
 footer.top h4 {
