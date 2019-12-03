@@ -794,6 +794,28 @@ video {
 	background: #f7d900;
 }
 
+.cars.used .row {
+	display: flex;
+}
+
+.cars.used .item {
+	border: 1px solid #ccc;
+	margin: 10px;
+	padding: 0;
+}
+
+.cars.used .item header {
+	overflow: hidden;
+}
+
+.cars.used .item header img {
+	display: block;
+}
+
+.cars.used .item h4 {
+	margin: 0;
+}
+
 footer.top {
 	background: #eee;
 }
