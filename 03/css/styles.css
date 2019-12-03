@@ -799,9 +799,9 @@ video {
 }
 
 .cars.used .item {
-	border: 1px solid #ccc;
 	margin: 10px;
 	padding: 0;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .cars.used .item header {
@@ -814,6 +814,18 @@ video {
 
 .cars.used .item h4 {
 	margin: 0;
+}
+
+.cars.used .item ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.cars.used .item ul li {
+	list-style: none;
 }
 
 footer.top {
