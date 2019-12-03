@@ -718,7 +718,7 @@ video {
 	transition: all 0.25s ease-in-out;
 }
 
-.cars .item:hover img {
+.cars.new .item:hover img {
 	transform: scale(1.2);
 }
 
