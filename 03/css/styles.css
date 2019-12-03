@@ -725,7 +725,6 @@ video {
 .cars .item a {
 	text-decoration: none;
 	color: #333;
-	text-transform: uppercase;
 }
 
 .cars .item h3 {
@@ -796,9 +795,12 @@ video {
 
 .cars.used .row {
 	display: flex;
+	margin-left: -10px;
+	margin-right: -10px;
 }
 
 .cars.used .item {
+	width: 25%;
 	margin: 10px;
 	padding: 0;
 	box-shadow: 0 0 5px rgba(0,0,0,0.2);
@@ -806,14 +808,23 @@ video {
 
 .cars.used .item header {
 	overflow: hidden;
+	min-height: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .cars.used .item header img {
 	display: block;
 }
 
-.cars.used .item h4 {
+.cars.used .item main {
+	padding: 10px;
+}
+
+.cars.used .item h3 {
 	margin: 0;
+	font-size: 1em;
 }
 
 .cars.used .item ul {
@@ -826,6 +837,25 @@ video {
 
 .cars.used .item ul li {
 	list-style: none;
+	margin: 5px;
+	font-size: 0.9em;
+}
+
+.cars.used .item .price {
+	line-height: 1em;
+}
+
+.cars.used .item .price .final {
+	color: green;
+}
+
+.cars.used .item .price .old {
+	color: #ccc;
+	font-size: 0.8em;
+}
+
+.cars.used .item .price span {
+	display: block;
 }
 
 footer.top {
