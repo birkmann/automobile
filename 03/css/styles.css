@@ -66,10 +66,6 @@ body.scrolled header.main {
 	border-bottom: 1px solid #ccc;
 }
 
-body.scrolled header.main a {
-	color: #666;
-}
-
 header.main a {
 	text-decoration: none;
 	color: #fff;
@@ -141,10 +137,6 @@ header.main nav.main ul li a {
 	text-align: center;
 }
 
-body.scrolled header.main a:hover {
-	color: #000;
-}
-
 @media (min-width: 960px) {
 	header.main .container {
 		display: flex;
@@ -182,6 +174,12 @@ body.scrolled header.main a:hover {
 	}
 	header.main nav.main ul li a:hover:after {
 		transform: scale(1);
+	}
+	body.scrolled header.main a {
+		color: #666;
+	}
+	body.scrolled header.main a:hover {
+		color: #000;
 	}
 }
 
@@ -319,7 +317,7 @@ body.scrolled header.main a:hover {
 	.emotion {
 		padding-top: 75px;
 		padding-bottom: 50px;
-		background: #eee;
+		background: #fff;
 		text-align: center;
 	}
 	.emotion .text {
@@ -702,10 +700,18 @@ video {
 	outline: 0 none;
 }
 
+.cars {
+	margin: 50px 0;
+}
 
 .cars .item {
 	text-align: center;
-	padding: 20px;
+}
+
+@media (min-width: 768px) {
+	.cars .item {
+		padding: 20px;
+	}
 }
 
 .cars .item * {
@@ -718,8 +724,10 @@ video {
 	transition: all 0.25s ease-in-out;
 }
 
-.cars.new .item:hover img {
-	transform: scale(1.2);
+@media (min-width: 768px) {
+	.cars.new .item:hover img {
+		transform: scale(1.2);
+	}
 }
 
 .cars .item a {
@@ -728,8 +736,9 @@ video {
 }
 
 .cars .item h3 {
-	font-size: 1.2em;
-	text-transform: uppercase;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 10px 0 0;
 }
 
 .cars .slider {
@@ -739,7 +748,7 @@ video {
 .cars .slick-prev,
 .cars .slick-next {
     position: absolute;
-    top: 50%;
+    top: 43%;
     cursor: pointer;
     width: 40px;
     height: 40px;
@@ -793,22 +802,16 @@ video {
 	background: #f7d900;
 }
 
-.cars.used .row {
-	display: flex;
-	margin-left: -10px;
-	margin-right: -10px;
-}
-
 .cars.used .item {
-	width: 25%;
-	margin: 10px;
 	padding: 0;
-	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	margin-bottom: 50px;
+	border: 1px solid #ddd;
 }
 
 .cars.used .item header {
 	overflow: hidden;
 	min-height: 200px;
+	min-height: 50vw;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -828,9 +831,6 @@ video {
 }
 
 .cars.used .item ul {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	margin: 0;
 	padding: 0;
 }
@@ -856,6 +856,39 @@ video {
 
 .cars.used .item .price span {
 	display: block;
+}
+
+@media (min-width: 768px) {
+	.cars.used .row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+    	justify-content: space-between;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.cars.used .item {
+		width: 48%;
+		padding: 0;
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	}
+	.cars.used .item header {
+		min-height: 25vw;
+	}
+	.cars.used .item ul {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 1400px) {
+	.cars.used .item {
+		width: 24%;
+	}
+	.cars.used .item header {
+		min-height: 200px;
+	}
 }
 
 footer.top {
