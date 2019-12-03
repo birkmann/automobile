@@ -465,15 +465,16 @@ header.main nav.main ul li a {
 
 
 .slick-dots {
-	display: flex;
-	position: absolute;
-	bottom: 30px;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	width: 100%;
-	text-align: center;
-	justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    left: 0;
 }
 
 .slick-dots li {
@@ -695,7 +696,7 @@ video {
 
 @media (min-width: 768px) {
 	.cars .item {
-		padding: 20px;
+		padding: 0 20px;
 	}
 }
 
@@ -776,7 +777,7 @@ video {
 }
 
 .cars .slick-dots {
-	bottom: -10px;
+	bottom: -40px;
 }
 
 .cars .slick-dots li button {
@@ -854,13 +855,12 @@ video {
 		flex-wrap: wrap;
 		align-items: center;
     	justify-content: space-between;
-		margin-left: -10px;
-		margin-right: -10px;
 	}
 	.cars.used .item {
 		width: 48%;
 		padding: 0;
 		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		margin-top: 25px;
 	}
 	.cars.used .item header {
 		min-height: 25vw;
