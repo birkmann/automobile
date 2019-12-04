@@ -11,7 +11,7 @@ $(document).ready(function() {
 	$(".emotion .slides").slick({
 		dots: true,
 		infinite: true,
-		autoplay: false,
+		autoplay: true,
 		arrows: false,
 		autoplaySpeed: 5000,
 		cssEase: 'linear'
